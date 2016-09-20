@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class carMovement : MonoBehaviour {
+public class CarMovement : MonoBehaviour {
 
 	public float acceleration = 5f;
 	public float torque = 5f;
