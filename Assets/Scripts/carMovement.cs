@@ -1,10 +1,12 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class CarMovement : MonoBehaviour {
 
 	public float acceleration = 5f;
 	public float torque = 5f;
+	[Range(0,100)]
+	public float turboAmount;
 
 	private float move = 0f;
 	private float direction = 0f;
@@ -67,5 +69,10 @@ public class CarMovement : MonoBehaviour {
 	{
 		Vector3 acc = Vector3.back * acceleration * Time.deltaTime;
 		body.AddRelativeForce (acc);
+	}
+
+	public void AddTurbo()
+	{
+		turboAmount += 100;
 	}
 }
